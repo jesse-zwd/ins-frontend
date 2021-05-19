@@ -8,14 +8,14 @@ class AuthService {
             const user = res.data
             localStorage.setItem("user", JSON.stringify(user))
             
-            toast.success("登录成功")
+            toast.success("logged in")
             return user
         })
     } 
 
     signup(payload) {
         return http.post("signup/", payload).then(() => {
-            toast.success("注册成功，请登录")
+            toast.success("register OK. please log in.")
         })
     }
 }
